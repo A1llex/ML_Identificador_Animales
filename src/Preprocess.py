@@ -79,14 +79,23 @@ class Preprocess(object):
         pickle.dump(self.labels, pickle_out)
         pickle_out.close()
 
+    @staticmethod
+    def prepare_image(filepath):
+        IMG_SIZE = 50  # 50 in txt-based
+        img_array = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)  # read in the image, convert to grayscale
+        new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))  # resize image to match model's expected sizing
+        return new_array.reshape(1, IMG_SIZE, IMG_SIZE, 1).astype(float)/255.0  # return the image with shaping that TF wants.
+
+
 
 # USO.
-pr = Preprocess()
-pr.load_training_data()
-pr.split_and_prepare()
-pr.write_out()
+if __name__ == '__main__':
+    pr = Preprocess()
+    pr.load_training_data()
+    pr.split_and_prepare()
+    pr.write_out()
 
-print("Imagenes ",pr.features.shape)
-print("Etiquetas ",pr.labels.shape)
+    print("Imagenes ",pr.features.shape)
+    print("Etiquetas ",pr.labels.shape)
 
-print("Termino de procesar Exitosamente " , len(pr.labels) ,  "imagenes")
+    print("Termino de procesar Exitosamente " , len(pr.labels) ,  "imagenes")
