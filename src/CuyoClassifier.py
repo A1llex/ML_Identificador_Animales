@@ -20,7 +20,7 @@ imagenes de cuyos.
 
 from AnimalClassifier import AnimalClassifier
 
-MODEL = 'model.Cuyo'
+MODEL = './modelos/Cuyo_v2.model'
 
 class CuyoClassifier:
     

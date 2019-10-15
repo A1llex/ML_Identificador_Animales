@@ -20,7 +20,7 @@ imagenes de aveztruces.
 
 from AnimalClassifier import AnimalClassifier
 
-MODEL = 'model.Aveztruz'
+MODEL = './modelos/Avestruz_v2.model'
 
 class AveztruzClassifier:
     

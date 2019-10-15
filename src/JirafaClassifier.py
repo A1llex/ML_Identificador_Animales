@@ -20,7 +20,7 @@ imagenes de jirafas.
 
 from AnimalClassifier import AnimalClassifier
 
-MODEL = 'model.Jirafa'
+MODEL = './modelos/Jirafa_v2.model'
 
 class JirafaClassifier:
     

@@ -20,7 +20,7 @@ imagenes de pinguinos.
 
 from AnimalClassifier import AnimalClassifier
 
-MODEL = 'model.Pinguino'
+MODEL = './modelos/Pinguino_v2.model'
 
 class PinguinoClassifier:
     
