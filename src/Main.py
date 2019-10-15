@@ -38,15 +38,15 @@ class Main:
     # Devuelve la categoria a la que pertenece la imagen
     def clasificar(self, filepath):
         if self.hippo_classifier.predict(filepath):
-            return HIPOPOTAMO
+            return self.HIPOPOTAMO
         elif self.pinguino_classifier.predict(filepath):
-            return PINGUINO
+            return self.PINGUINO
         elif self.jirafa_classifier.predict(filepath):
-            return JIRAFA
+            return self.JIRAFA
         elif self.cuyo_classifier.predict(filepath):
-            return CUYO
+            return self.CUYO
         elif self.aveztruz_classifier.predict(filepath):
-            return AVEZTRUZ
+            return self.AVEZTRUZ
         else:
             return None
 
