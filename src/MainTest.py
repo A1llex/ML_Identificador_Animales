@@ -17,12 +17,6 @@ del clasificador.
 import unittest
 from Main import Main
 
-HIPOPOTAMO = 'hipopotamo'
-PINGUINO = 'pinguino'
-AVEZTRUZ = 'aveztruz'
-CUYO = 'cuyo'
-JIRAFA = 'jirafa'
-
 # Imagen de hipopotamo
 HIPPO_FILE = './unit_test_data/hippo.jpg'
 # Imagen de pinguino
@@ -39,27 +33,27 @@ class MainTest(unittest.TestCase):
     # Prueba el caso de que se pase la imagen de un hipopotamo
     def test_hipopotamo(self):
         main = Main()
-        self.assertEqual(main.clasificar(HIPPO_FILE),HIPOPOTAMO)
+        self.assertEqual(main.clasificar(HIPPO_FILE),main.HIPOPOTAMO)
 
     # Prueba el caso de que se pase la imagen de un pinguino
     def test_pinguino(self):
         main = Main()
-        self.assertEqual(main.clasificar(PINGUINO_FILE),PINGUINO)
+        self.assertEqual(main.clasificar(PINGUINO_FILE), main.PINGUINO)
 
     # Prueba el caso de que se pase la imagen de un aveztruz
     def test_aveztruz(self):
         main = Main()
-        self.assertEqual(main.clasificar(AVEZTRUZ_FILE),AVEZTRUZ)
+        self.assertEqual(main.clasificar(AVEZTRUZ_FILE), main.AVEZTRUZ)
 
     # Prueba el caso de que se pase la imagen de un cuyo
     def test_cuyo(self):
         main = Main()
-        self.assertEqual(main.clasificar(CUYO_FILE),CUYO)
+        self.assertEqual(main.clasificar(CUYO_FILE), main.CUYO)
 
     # Prueba el caso de que se pase la imagen de una jirafa
     def test_jirafa(self):
         main = Main()
-        self.assertEqual(main.clasificar(JIRAFA_FILE),JIRAFA)
+        self.assertEqual(main.clasificar(JIRAFA_FILE), main.JIRAFA)
 
 
 if __name__ == "__main__":

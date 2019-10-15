@@ -21,13 +21,13 @@ from CuyoClassifier import CuyoClassifier
 from JirafaClassifier import JirafaClassifier
 import sys
 
-HIPOPOTAMO = 'hipopotamo'
-PINGUINO = 'pinguino'
-AVEZTRUZ = 'aveztruz'
-CUYO = 'cuyo'
-JIRAFA = 'jirafa'
-
 class Main:
+
+    HIPOPOTAMO = 'hipopotamo'
+    PINGUINO = 'pinguino'
+    AVEZTRUZ = 'aveztruz'
+    CUYO = 'cuyo'
+    JIRAFA = 'jirafa'
 
     hippo_classifier = HippoClassifier()
     pinguino_classifier = PinguinoClassifier()
@@ -45,8 +45,10 @@ class Main:
             return JIRAFA
         elif self.cuyo_classifier.predict(filepath):
             return CUYO
-        else:
+        elif self.aveztruz_classifier.predict(filepath):
             return AVEZTRUZ
+        else:
+            return None
 
 if __name__ == '__main__':
     main = Main()
