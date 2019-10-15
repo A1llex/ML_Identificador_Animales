@@ -20,7 +20,7 @@ imagenes de hipopotamos.
 
 from AnimalClassifier import AnimalClassifier
 
-MODEL = 'model.Hipopotamo'
+MODEL = './modelos/Hiipopotamo_v2.model'
 
 class HippoClassifier:
     

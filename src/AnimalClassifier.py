@@ -35,4 +35,4 @@ class AnimalClassifier:
         prediction = self.model.predict([Preprocess.prepare_image(filepath)])
         max = np.argmax(prediction)
         # Si esta en la posicion 1 es verdadero
-        return True if max == 1 else False
+        return True if max >= .7 else False
