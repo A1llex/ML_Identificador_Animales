@@ -16,7 +16,7 @@ del clasificador.
 """
 from HippoClassifier import HippoClassifier
 from PinguinoClassifier import PinguinoClassifier
-from AveztruzClassifier import AveztruzClassifier
+from AvestruzClassifier import AvestruzClassifier
 from CuyoClassifier import CuyoClassifier
 from JirafaClassifier import JirafaClassifier
 import sys
@@ -25,13 +25,13 @@ class Main:
 
     HIPOPOTAMO = 'hipopotamo'
     PINGUINO = 'pinguino'
-    AVEZTRUZ = 'aveztruz'
+    AVESTRUZ = 'avestruz'
     CUYO = 'cuyo'
     JIRAFA = 'jirafa'
 
     hippo_classifier = HippoClassifier()
     pinguino_classifier = PinguinoClassifier()
-    aveztruz_classifier = AveztruzClassifier()
+    avestruz_classifier = AvestruzClassifier()
     cuyo_classifier = CuyoClassifier()
     jirafa_classifier = JirafaClassifier()
 
@@ -45,8 +45,8 @@ class Main:
             return self.JIRAFA
         elif self.cuyo_classifier.predict(filepath):
             return self.CUYO
-        elif self.aveztruz_classifier.predict(filepath):
-            return self.AVEZTRUZ
+        elif self.avestruz_classifier.predict(filepath):
+            return self.AVESTRUZ
         else:
             return None
 
