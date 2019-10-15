@@ -13,31 +13,31 @@ Autor: Equipo Pumacate
 Fecha:  13/10/2019
 =============================================
 Contiene la definición de la clase
-AveztruzClassifierTest encargada del las pruebas
-de la clase AveztruzClassifier.
+AvestruzClassifierTest encargada del las pruebas
+de la clase AvestruzClassifier.
 =============================================
 """
 
 import unittest
-from AveztruzClassifier import AveztruzClassifier
+from AvestruzClassifier import AvestruzClassifier
 
 # Imagen de aveztruz
-AVEZTRUZ_FILE = './unit_test_data/aveztruz.jpg'
+AVESTRUZ_FILE = './unit_test_data/avestruz.jpg'
 # Imagen de no aveztruz
-NOT_AVEZTRUZ_FILE = './unit_test_data/not_aveztruz.jpg'
+NOT_AVESTRUZ_FILE = './unit_test_data/not_avestruz.jpg'
 
-class AveztruzClassifierTest(unittest.TestCase):
+class AvestruzClassifierTest(unittest.TestCase):
     
     # Prueba el caso de que se pase la imagen de un aveztruz
     def test_predict_true(self):
-        classifier = AveztruzClassifier()
-        self.assertTrue(classifier.predict(AVEZTRUZ_FILE))
+        classifier = AvestruzClassifier()
+        self.assertTrue(classifier.predict(AVESTRUZ_FILE))
 
     # Prueba el caso de que se pase la imagen de algo que no sea
     # un aveztruz
     def test_predict_false(self):
-        classifier = AveztruzClassifier()
-        self.assertFalse(classifier.predict(NOT_AVEZTRUZ_FILE))
+        classifier = AvestruzClassifier()
+        self.assertFalse(classifier.predict(NOT_AVESTRUZ_FILE))
 
 if __name__ == "__main__":
     unittest.main()
