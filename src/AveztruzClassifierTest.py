@@ -21,9 +21,9 @@ de la clase AveztruzClassifier.
 import unittest
 from AveztruzClassifier import AveztruzClassifier
 
-# Imagen de hipopotamo
+# Imagen de aveztruz
 AVEZTRUZ_FILE = './unit_test_data/aveztruz.jpg'
-# Imagen de no hipopotamo
+# Imagen de no aveztruz
 NOT_AVEZTRUZ_FILE = './unit_test_data/not_aveztruz.jpg'
 
 class AveztruzClassifierTest(unittest.TestCase):

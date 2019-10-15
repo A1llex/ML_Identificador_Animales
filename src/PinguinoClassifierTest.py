@@ -21,9 +21,9 @@ de la clase PinguinoClassifier.
 import unittest
 from PinguinoClassifier import PinguinoClassifier
 
-# Imagen de hipopotamo
+# Imagen de pinguino
 PINGUINO_FILE = './unit_test_data/pinguino.jpg'
-# Imagen de no hipopotamo
+# Imagen de no pinguino
 NOT_PINGUINO_FILE = './unit_test_data/not_pinguino.jpg'
 
 class PinguinoClassifierTest(unittest.TestCase):
