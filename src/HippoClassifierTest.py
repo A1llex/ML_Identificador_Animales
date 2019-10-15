@@ -37,7 +37,7 @@ class HippoClassifierTest(unittest.TestCase):
     # un hipopotamo
     def test_predict_false(self):
         hippo_classifier = HippoClassifier()
-        self.assertTrue(hippo_classifier.predict(NOT_HIPPO_FILE))
+        self.assertFalse(hippo_classifier.predict(NOT_HIPPO_FILE))
 
 if __name__ == "__main__":
     unittest.main()
