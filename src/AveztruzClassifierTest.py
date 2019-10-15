@@ -13,31 +13,31 @@ Autor: Equipo Pumacate
 Fecha:  13/10/2019
 =============================================
 Contiene la definición de la clase
-HippoClassifierTest encargada del las pruebas
-de la clase HippoClassifier.
+AveztruzClassifierTest encargada del las pruebas
+de la clase AveztruzClassifier.
 =============================================
 """
 
 import unittest
-from HippoClassifier import HippoClassifier
+from AveztruzClassifier import AveztruzClassifier
 
 # Imagen de hipopotamo
-HIPPO_FILE = './unit_test_data/hippo.jpg'
+AVEZTRUZ_FILE = './unit_test_data/aveztruz.jpg'
 # Imagen de no hipopotamo
-NOT_HIPPO_FILE = './unit_test_data/not_hippo.jpg'
+NOT_AVEZTRUZ_FILE = './unit_test_data/not_aveztruz.jpg'
 
-class HippoClassifierTest(unittest.TestCase):
+class AveztruzClassifierTest(unittest.TestCase):
     
-    # Prueba el caso de que se pase la imagen de un hipopotamo
+    # Prueba el caso de que se pase la imagen de un aveztruz
     def test_predict_true(self):
-        classifier = HippoClassifier()
-        self.assertTrue(classifier.predict(HIPPO_FILE))
+        classifier = AveztruzClassifier()
+        self.assertTrue(classifier.predict(AVEZTRUZ_FILE))
 
     # Prueba el caso de que se pase la imagen de algo que no sea
-    # un hipopotamo
+    # un aveztruz
     def test_predict_false(self):
-        classifier = HippoClassifier()
-        self.assertFalse(classifier.predict(NOT_HIPPO_FILE))
+        classifier = AveztruzClassifier()
+        self.assertFalse(classifier.predict(NOT_AVEZTRUZ_FILE))
 
 if __name__ == "__main__":
     unittest.main()

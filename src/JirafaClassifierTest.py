@@ -13,31 +13,31 @@ Autor: Equipo Pumacate
 Fecha:  13/10/2019
 =============================================
 Contiene la definición de la clase
-HippoClassifierTest encargada del las pruebas
-de la clase HippoClassifier.
+JirafaClassifierTest encargada del las pruebas
+de la clase JirafaClassifier.
 =============================================
 """
 
 import unittest
-from HippoClassifier import HippoClassifier
+from JirafaClassifier import JirafaClassifier
 
-# Imagen de hipopotamo
-HIPPO_FILE = './unit_test_data/hippo.jpg'
-# Imagen de no hipopotamo
-NOT_HIPPO_FILE = './unit_test_data/not_hippo.jpg'
+# Imagen de jirafa
+JIRAFA_FILE = './unit_test_data/jirafa.jpg'
+# Imagen de no jirafa
+NOT_JIRAFA_FILE = './unit_test_data/not_jirafa.jpg'
 
-class HippoClassifierTest(unittest.TestCase):
+class JirafaClassifierTest(unittest.TestCase):
     
-    # Prueba el caso de que se pase la imagen de un hipopotamo
+    # Prueba el caso de que se pase la imagen de un jirafa
     def test_predict_true(self):
-        classifier = HippoClassifier()
-        self.assertTrue(classifier.predict(HIPPO_FILE))
+        classifier = JirafaClassifier()
+        self.assertTrue(classifier.predict(JIRAFA_FILE))
 
     # Prueba el caso de que se pase la imagen de algo que no sea
-    # un hipopotamo
+    # un jirafa
     def test_predict_false(self):
-        classifier = HippoClassifier()
-        self.assertFalse(classifier.predict(NOT_HIPPO_FILE))
+        classifier = JirafaClassifier()
+        self.assertFalse(classifier.predict(NOT_JIRAFA_FILE))
 
 if __name__ == "__main__":
     unittest.main()

@@ -13,31 +13,31 @@ Autor: Equipo Pumacate
 Fecha:  13/10/2019
 =============================================
 Contiene la definición de la clase
-HippoClassifierTest encargada del las pruebas
-de la clase HippoClassifier.
+PinguinoClassifierTest encargada del las pruebas
+de la clase PinguinoClassifier.
 =============================================
 """
 
 import unittest
-from HippoClassifier import HippoClassifier
+from PinguinoClassifier import PinguinoClassifier
 
 # Imagen de hipopotamo
-HIPPO_FILE = './unit_test_data/hippo.jpg'
+PINGUINO_FILE = './unit_test_data/pinguino.jpg'
 # Imagen de no hipopotamo
-NOT_HIPPO_FILE = './unit_test_data/not_hippo.jpg'
+NOT_PINGUINO_FILE = './unit_test_data/not_pinguino.jpg'
 
-class HippoClassifierTest(unittest.TestCase):
+class PinguinoClassifierTest(unittest.TestCase):
     
-    # Prueba el caso de que se pase la imagen de un hipopotamo
+    # Prueba el caso de que se pase la imagen de un pinguino
     def test_predict_true(self):
-        classifier = HippoClassifier()
-        self.assertTrue(classifier.predict(HIPPO_FILE))
+        classifier = PinguinoClassifier()
+        self.assertTrue(classifier.predict(PINGUINO_FILE))
 
     # Prueba el caso de que se pase la imagen de algo que no sea
-    # un hipopotamo
+    # un pinguino
     def test_predict_false(self):
-        classifier = HippoClassifier()
-        self.assertFalse(classifier.predict(NOT_HIPPO_FILE))
+        classifier = PinguinoClassifier()
+        self.assertFalse(classifier.predict(NOT_PINGUINO_FILE))
 
 if __name__ == "__main__":
     unittest.main()

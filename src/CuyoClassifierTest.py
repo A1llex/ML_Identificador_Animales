@@ -13,31 +13,31 @@ Autor: Equipo Pumacate
 Fecha:  13/10/2019
 =============================================
 Contiene la definición de la clase
-HippoClassifierTest encargada del las pruebas
-de la clase HippoClassifier.
+CuyoClassifierTest encargada del las pruebas
+de la clase CuyoClassifier.
 =============================================
 """
 
 import unittest
-from HippoClassifier import HippoClassifier
+from CuyoClassifier import CuyoClassifier
 
-# Imagen de hipopotamo
-HIPPO_FILE = './unit_test_data/hippo.jpg'
-# Imagen de no hipopotamo
-NOT_HIPPO_FILE = './unit_test_data/not_hippo.jpg'
+# Imagen de cuyo
+CUYO_FILE = './unit_test_data/cuyo.jpg'
+# Imagen de no cuyo
+NOT_CUYO_FILE = './unit_test_data/not_cuyo.jpg'
 
-class HippoClassifierTest(unittest.TestCase):
+class CuyoClassifierTest(unittest.TestCase):
     
-    # Prueba el caso de que se pase la imagen de un hipopotamo
+    # Prueba el caso de que se pase la imagen de un cuyo
     def test_predict_true(self):
-        classifier = HippoClassifier()
-        self.assertTrue(classifier.predict(HIPPO_FILE))
+        classifier = CuyoClassifier()
+        self.assertTrue(classifier.predict(CUYO_FILE))
 
     # Prueba el caso de que se pase la imagen de algo que no sea
-    # un hipopotamo
+    # un cuyo
     def test_predict_false(self):
-        classifier = HippoClassifier()
-        self.assertFalse(classifier.predict(NOT_HIPPO_FILE))
+        classifier = CuyoClassifier()
+        self.assertFalse(classifier.predict(NOT_CUYO_FILE))
 
 if __name__ == "__main__":
     unittest.main()
