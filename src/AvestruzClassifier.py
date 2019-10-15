@@ -22,7 +22,7 @@ from AnimalClassifier import AnimalClassifier
 
 MODEL = './modelos/Avestruz_v2.model'
 
-class AveztruzClassifier:
+class AvestruzClassifier:
     
     # Crea un clasificador con el modelo del aveztruz
     classifier = AnimalClassifier(MODEL)
