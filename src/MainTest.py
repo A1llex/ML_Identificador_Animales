@@ -22,7 +22,7 @@ HIPPO_FILE = './unit_test_data/hippo.jpg'
 # Imagen de pinguino
 PINGUINO_FILE = './unit_test_data/pinguino.jpg'
 # Imagen de aveztruz
-AVEZTRUZ_FILE = './unit_test_data/aveztruz.jpg'
+AVESTRUZ_FILE = './unit_test_data/avestruz.jpg'
 # Imagen de cuyo
 CUYO_FILE = './unit_test_data/cuyo.jpg'
 # Imagen de jirafa
@@ -41,9 +41,9 @@ class MainTest(unittest.TestCase):
         self.assertEqual(main.clasificar(PINGUINO_FILE), main.PINGUINO)
 
     # Prueba el caso de que se pase la imagen de un aveztruz
-    def test_aveztruz(self):
+    def test_avestruz(self):
         main = Main()
-        self.assertEqual(main.clasificar(AVEZTRUZ_FILE), main.AVEZTRUZ)
+        self.assertEqual(main.clasificar(AVESTRUZ_FILE), main.AVESTRUZ)
 
     # Prueba el caso de que se pase la imagen de un cuyo
     def test_cuyo(self):
