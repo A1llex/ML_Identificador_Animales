@@ -42,6 +42,7 @@ class Preprocess(object):
         for category in self.CATEGORIES:
             path = os.path.join(self.DATADIR, category) # Une dos carpetas.
             class_num = self.CATEGORIES.index(category)
+            flag = 1
             for img in os.listdir(path):
                 try:
                     # Leemos la imagen como arreglo. La leeremos en blanco/negro.
@@ -51,6 +52,10 @@ class Preprocess(object):
                     new_array = cv2.resize(img_array, (self.IMG_SIZE, self.IMG_SIZE))
                     # Arreglo con la imagen y su etiqueta.
                     self.training_data.append([new_array, class_num])
+                    # Para la mitad de las imagenes, las agrega volteadas horizontalmente tambien
+                    if flag :
+                        self.training_data.append([cv2.flip(new_array, 1), class_num])
+                    flagx^=1
                 except Exception as e:
                     print("La imagen  ",path,img," no pudo ser leida.")
 
